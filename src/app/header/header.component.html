@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+  <a routerLink="" class="logo">Reelio</a>
+  <span class="example-spacer">
+  </span>
+  <div *ngIf="isLoggedIn">
+    <a routerLink="/upload-video" mat-icon-button>
+      <mat-icon>video_call</mat-icon>
+    </a>
+    <button mat-icon-button>
+      <mat-icon>account_circle</mat-icon>
+    </button>
+  </div>
+  <a *ngIf="!isLoggedIn" (click)="login()" class="logo">Login</a>
+</mat-toolbar>
